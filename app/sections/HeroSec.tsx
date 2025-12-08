@@ -233,7 +233,7 @@ function HeroSec() {
             >
               Explore Services
             </motion.button>
-            <button className="px-4 py-2.5 flex group cursor-pointer rounded-full text-xs sm:text-sm font-medium border border-black/15 text-black/80 hover:bg-black/5">
+            <button className="px-4 py-2.5 flex items-center group cursor-pointer rounded-full text-xs sm:text-sm font-medium border border-black/15 text-black/80 hover:bg-black/5">
               Request Resume <ArrowUpRight className="group-hover:translate-x-1 transition-all duration-500"/>
             </button>
           </div>
