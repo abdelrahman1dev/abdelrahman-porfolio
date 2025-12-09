@@ -1,6 +1,7 @@
 import projects from "@/public/projects";
 import Image from "next/image";
 import Link from "next/link";
+
 import { Github, ExternalLink, ArrowLeft } from "lucide-react";
 
 export default async function Page({
@@ -40,6 +41,8 @@ export default async function Page({
             <ArrowLeft className="w-4 h-4" />
             <span>Back</span>
           </Link>
+
+      
 
           <span className="text-xs px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 border border-emerald-200">
             Project Details
