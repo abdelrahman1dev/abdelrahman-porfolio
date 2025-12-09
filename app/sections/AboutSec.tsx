@@ -168,7 +168,7 @@ function AboutSec() {
                 repeat: Infinity,
               }}
             >
-           <Image  src={'/img/2.jpg'} alt='photo' width={200} height={200}/>
+           <Image  src={'/img/2.jpg'} alt='photo' width={500} height={500}/>
             </motion.div>
           </motion.div>
         </div>
