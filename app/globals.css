@@ -196,15 +196,7 @@
 }
 
 
-html,
-body,
-button,
-a,
-[role="button"],
-input,
-textarea {
-  cursor: none !important;
-}
+
 
 
 .activnav {

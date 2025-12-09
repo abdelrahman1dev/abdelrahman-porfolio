@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Star, Github, Linkedin, Dribbble, ArrowUpRight } from "lucide-react";
 import GrediantTxt from "../components/GrediantTxt";
  import Squares from '@/components/Squares';
+ import Link from "next/link";
 function HeroSec() {
   return (
      <div
@@ -231,11 +232,13 @@ function HeroSec() {
               whileHover={{ y: -1, scale: 1.02 }}
               className="px-5 py-2.5 rounded-full cursor-pointer text-sm font-medium bg-emerald-500 hover:bg-emerald-400 text-black shadow-md shadow-emerald-500/30"
             >
-              Explore Services
+              <a href="#projects">Explore Services</a>
             </motion.button>
+             <Link href="/contact"> 
             <button className="px-4 py-2.5 flex items-center group cursor-pointer rounded-full text-xs sm:text-sm font-medium border border-black/15 text-black/80 hover:bg-black/5">
-              Request Resume <ArrowUpRight className="group-hover:translate-x-1 transition-all duration-500"/>
+            Request Resume <ArrowUpRight className="group-hover:translate-x-1 transition-all duration-500"/>
             </button>
+            </Link>
           </div>
         </motion.div>
       </motion.div>

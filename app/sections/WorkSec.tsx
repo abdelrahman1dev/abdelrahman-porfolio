@@ -30,7 +30,7 @@ function WorkSec() {
   };
 
   return (
-    <section className="relative w-full py-24 px-6" style={{ backgroundColor: 'var(--bg-color)' }}>
+    <section id='projects' className="relative w-full py-24 px-6" style={{ backgroundColor: 'var(--bg-color)' }}>
       {/* Background decoration - Emerald */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div

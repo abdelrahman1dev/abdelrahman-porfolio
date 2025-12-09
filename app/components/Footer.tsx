@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Mail, Heart, ArrowUp } from 'lucide-react';
+import Link from 'next/link';
+import { Github,  Twitter, Mail, Heart, ArrowUp } from 'lucide-react';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,10 +15,9 @@ function Footer() {
   ];
 
   const quickLinks = [
-    { label: 'Home', href: '#' },
-    { label: 'About', href: '#' },
-    { label: 'Projects', href: '#' },
-    { label: 'Contact', href: '#' },
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Contact', href: '/contact' },
   ];
 
   const scrollToTop = () => {
@@ -79,13 +79,13 @@ function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm transition-colors hover:font-semibold"
                     style={{ color: 'var(--text-secondary)' }}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

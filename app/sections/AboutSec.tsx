@@ -151,7 +151,7 @@ function AboutSec() {
             viewport={{ once: true }}
           >
             <motion.div
-              className="h-96 rounded-2xl border-4 flex items-center justify-center"
+              className="h-96 rounded-2xl border-4 flex items-center justify-center overflow-hidden"
               style={{
                 borderColor: '#10b981',
                 backgroundColor: 'rgba(16, 185, 129, 0.08)',
@@ -168,7 +168,7 @@ function AboutSec() {
                 repeat: Infinity,
               }}
             >
-           <Image  src={'/img/2.jpg'} alt='photo' width={500} height={500}/>
+           <Image  src={'/img/2.jpg'} alt='photo' width={200} height={200} className='w-full'/>
             </motion.div>
           </motion.div>
         </div>

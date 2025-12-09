@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "./components/Nav";
-import CustomCursor from "./components/CustomCursor";
 import Footer from "./components/Footer";
+import { Toaster } from "@/components/ui/sonner";
 
 
 
@@ -18,12 +18,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Toaster />
+
+
       <Nav />
+ 
+      
       <body
         className={`antialiased`}
         style={{ backgroundColor: "var(--bg-color, #020617)" }}
       >
-        <CustomCursor />
+        
         {children}
         <Footer />
       </body>
