@@ -2,9 +2,21 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Hamburger from "./Haburger";
 
 export default function Nav() {
+
+  const pathname = usePathname();
+
+
+  const hideOn = [
+    "/projects",
+    "/projects/",
+  ];
+
+  const hideExact =pathname.startsWith('/projects/');
+  const shouldHide = hideOn.includes(pathname) || hideExact;
   const [open, setOpen] = useState(false);
 
   const navItems = [
@@ -21,13 +33,14 @@ export default function Nav() {
 
   return (
     <header
-      className="
+      className={`
         fixed top-2 inset-x-0
         glass-nav
         mx-auto max-w-[90%]
         p-3 flex items-center justify-between
-        z-[100]
-      "
+        z-100
+        ${shouldHide ? 'hidden' : ''}
+      `}
     >
       {/* LEFT: Logo + Hamburger */}
       <nav className="flex items-center justify-between w-full gap-6 lg:gap-20">
@@ -39,19 +52,25 @@ export default function Nav() {
 
         {/* Desktop Nav */}
         <ul className="hidden lg:flex items-center gap-5">
-          {navItems.map((item) => (
-            <li key={item.text}>
+          {navItems.map((item) => {
+
+            const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
+            return (
+                   <li key={item.text} >
               <Link
                 href={item.href}
-                className="
+                className={`
+                  ${isActive ? 'activnav' : ''}
+                  
                   text-sm lg:text-base font-medium
                   hover:text-blue-600 transition-colors
-                "
+                `}
               >
                 {item.text}
               </Link>
             </li>
-          ))}
+            )
+})}
 
           {/* Desktop Socials */}
           <div className="flex items-center gap-3">

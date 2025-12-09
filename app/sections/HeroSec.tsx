@@ -77,7 +77,7 @@ function HeroSec() {
               className="text-[11px] uppercase tracking-[0.25em]"
               style={{ color: "var(--text-secondary, #9ca3af)" }}
             >
-              Fullstack Developer
+              Front-end Developer
             </p>
             <h1
               className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight"
@@ -85,7 +85,7 @@ function HeroSec() {
             >
               Meet the Expert
               <br />
-              <GrediantTxt text="fullstack engineer" ClassName="text-4xl lg:text-5xl font-bold leading-tight" />
+              <GrediantTxt text="front-end dev" ClassName="text-4xl lg:text-5xl font-bold leading-tight" />
             </h1>
             <p
               className="text-sm"

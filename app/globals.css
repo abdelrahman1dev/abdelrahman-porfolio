@@ -205,3 +205,8 @@ input,
 textarea {
   cursor: none !important;
 }
+
+
+.activnav {
+  @apply text-emerald-400
+}

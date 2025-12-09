@@ -9,7 +9,6 @@ function Footer() {
 
   const socialLinks = [
     { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
     { icon: Twitter, href: '#', label: 'Twitter' },
     { icon: Mail, href: '#', label: 'Email' },
   ];
@@ -68,7 +67,7 @@ function Footer() {
               AM
             </h3>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-              Fullstack developer crafting beautiful and functional digital experiences.
+              Front-end developer crafting beautiful and functional digital experiences.
             </p>
           </motion.div>
 
@@ -99,7 +98,7 @@ function Footer() {
             </h4>
             <ul className="space-y-2 text-sm">
               <li style={{ color: 'var(--text-secondary)' }}>
-                Email: <span className="font-medium">abdelrahman@example.com</span>
+                Email: <span className="font-medium">abdelrahmanprog16@gmail.com</span>
               </li>
               <li style={{ color: 'var(--text-secondary)' }}>
                 Location: <span className="font-medium">Egypt</span>

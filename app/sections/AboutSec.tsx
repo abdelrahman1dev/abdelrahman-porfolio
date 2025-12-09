@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Code, Lightbulb, Zap, Award } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import Image from 'next/image';
 import GrediantTxt from '../components/GrediantTxt';
 
 function AboutSec() {
@@ -90,7 +91,7 @@ function AboutSec() {
             className="text-lg max-w-2xl mx-auto"
             style={{ color: 'var(--text-secondary)' }}
           >
-            I'm a passionate fullstack developer focused on creating beautiful, functional web experiences
+            I'm a passionate front-end developer focused on creating beautiful, functional web experiences
           </p>
         </motion.div>
 
@@ -118,7 +119,7 @@ function AboutSec() {
                   Who I Am
                 </h3>
                 <p style={{ color: 'var(--text-primary)' }} className="leading-relaxed">
-                  I'm Abdelrahman Mohamed, a fullstack developer with a passion for building modern web applications. With expertise in React, Next.js, and backend technologies, I create seamless digital experiences that solve real-world problems.
+                  I'm Abdelrahman Mohamed, a front-end developer with a passion for building modern web applications. With expertise in React, Next.js, and backend technologies, I create seamless digital experiences that solve real-world problems.
                 </p>
               </div>
 
@@ -167,12 +168,7 @@ function AboutSec() {
                 repeat: Infinity,
               }}
             >
-              <div
-                className="text-8xl"
-                style={{ opacity: 0.5 }}
-              >
-                📷
-              </div>
+           <Image  src={'/img/2.jpg'} alt='photo' width={200} height={200}/>
             </motion.div>
           </motion.div>
         </div>
@@ -259,9 +255,9 @@ function AboutSec() {
                 transition={{ duration: 0.4 }}
               >
                 {[
-                  { number: '50+', label: 'Projects Completed' },
-                  { number: '30+', label: 'Happy Clients' },
-                  { number: '3+', label: 'Years Experience' },
+                  { number: '10+', label: 'Projects Completed' },
+                  { number: '5+', label: 'Happy Clients' },
+                  { number: '2+', label: 'Years Experience' },
                 ].map((stat, index) => (
                   <motion.div
                     key={index}
@@ -299,7 +295,6 @@ function AboutSec() {
                   { name: 'Next.js', level: 'Expert' },
                   { name: 'JavaScript', level: 'Expert' },
                   { name: 'TypeScript', level: 'Advanced' },
-                  { name: 'Express.js', level: 'Advanced' },
                   { name: 'Supabase', level: 'Intermediate' },
                 ].map((tech, index) => (
                   <motion.div

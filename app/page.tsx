@@ -7,9 +7,10 @@ export default function Home() {
     <>
       <div>
         <HeroSec />
-        <WorkSec />
         <AboutSec />
-        
+        <WorkSec />
+
+
       </div></>
   );
 }

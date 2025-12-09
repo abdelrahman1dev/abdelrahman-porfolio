@@ -1,73 +1,14 @@
 'use client';
 
-import React from 'react';
+import projects from '@/public/projects'
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 import GrediantTxt from '../components/GrediantTxt';
+import Link from 'next/link';
 
 function WorkSec() {
-  const projects = [
-    {
-      id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-featured e-commerce platform built with Next.js, featuring product catalog, shopping cart, and payment integration.',
-      tags: ['Next.js', 'React', 'Stripe', 'Supabase'],
-      image: '🛍️',
-      github: '#',
-      live: '#',
-      featured: true,
-    },
-    {
-      id: 2,
-      title: 'Task Management App',
-      description: 'Collaborative task management application with real-time updates, team collaboration, and advanced filtering.',
-      tags: ['React', 'Express', 'WebSocket', 'MongoDB'],
-      image: '✓',
-      github: '#',
-      live: '#',
-      featured: true,
-    },
-    {
-      id: 3,
-      title: 'Portfolio Website',
-      description: 'Modern portfolio website showcasing work and skills with smooth animations and responsive design.',
-      tags: ['Next.js', 'Tailwind', 'Framer Motion'],
-      image: '🎨',
-      github: '#',
-      live: '#',
-      featured: false,
-    },
-    {
-      id: 4,
-      title: 'Weather Dashboard',
-      description: 'Real-time weather application with location-based forecasts and interactive visualizations.',
-      tags: ['React', 'API Integration', 'Chart.js'],
-      image: '⛅',
-      github: '#',
-      live: '#',
-      featured: false,
-    },
-    {
-      id: 5,
-      title: 'Social Media Analytics',
-      description: 'Analytics dashboard for social media metrics with data visualization and insights.',
-      tags: ['React', 'D3.js', 'Node.js', 'PostgreSQL'],
-      image: '📊',
-      github: '#',
-      live: '#',
-      featured: false,
-    },
-    {
-      id: 6,
-      title: 'Chat Application',
-      description: 'Real-time messaging application with user authentication, file sharing, and notifications.',
-      tags: ['Socket.io', 'Express', 'React', 'MongoDB'],
-      image: '💬',
-      github: '#',
-      live: '#',
-      featured: false,
-    },
-  ];
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -133,7 +74,8 @@ function WorkSec() {
           viewport={{ once: true }}
         >
           {projects.filter((p) => p.featured).map((project) => (
-            <motion.div
+            <Link href={`/projects/${project.link}`} key={project.id}>
+                <motion.div
               key={project.id}
               variants={itemVariants}
               className="group rounded-2xl border overflow-hidden backdrop-blur-sm transition-all duration-300 hover:shadow-lg"
@@ -144,7 +86,8 @@ function WorkSec() {
               whileHover={{ y: -5 }}
             >
               <div className="relative h-56 flex items-center justify-center overflow-hidden" style={{ backgroundColor: 'rgba(16, 185, 129, 0.1)' }}>
-                <div className="text-8xl group-hover:scale-110 transition-transform duration-300">{project.image}</div>
+
+                <Image className="text-8xl group-hover:scale-110 transition-transform duration-300" src={project.image} alt='project' width={600} height={600} />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2" style={{ color: '#10b981' }}>
@@ -193,6 +136,7 @@ function WorkSec() {
                 </div>
               </div>
             </motion.div>
+            </Link>
           ))}
         </motion.div>
 
@@ -205,7 +149,8 @@ function WorkSec() {
           viewport={{ once: true }}
         >
           {projects.filter((p) => !p.featured).map((project) => (
-            <motion.div
+           <Link href={`/projects/${project.link}`}>
+             <motion.div
               key={project.id}
               variants={itemVariants}
               className="group rounded-xl border overflow-hidden backdrop-blur-sm transition-all duration-300 hover:shadow-lg"
@@ -216,7 +161,7 @@ function WorkSec() {
               whileHover={{ y: -3 }}
             >
               <div className="relative h-40 flex items-center justify-center overflow-hidden" style={{ backgroundColor: 'rgba(16, 185, 129, 0.1)' }}>
-                <div className="text-6xl group-hover:scale-110 transition-transform duration-300">{project.image}</div>
+                <Image className="text-6xl group-hover:scale-110 transition-transform duration-300" src={project.image} alt='project' width={400} height={400} />
               </div>
               <div className="p-5">
                 <h3 className="text-lg font-bold mb-2" style={{ color: '#10b981' }}>
@@ -265,6 +210,7 @@ function WorkSec() {
                 </div>
               </div>
             </motion.div>
+           </Link>
           ))}
         </motion.div>
       </div>
