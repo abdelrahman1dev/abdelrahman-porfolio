@@ -139,7 +139,7 @@ function HeroSec() {
   {/* الصورة - ثابتة */}
   <div className="h-52 w-52 rounded-full overflow-hidden bg-white shadow-lg">
     <Image
-      src="/img/download.jpg"
+      src="https://feyd0czhfg.ufs.sh/f/2e1mkQHWCrRAhylBtYntMklL5EIu6A7wrqnTvamK8O1DFCYe"
       width={500}
       height={500}
       alt="pfp"
